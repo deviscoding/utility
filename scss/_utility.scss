@@ -1,0 +1,32 @@
+// Base Functions & Maps
+@import "strapless/base/scss/base";
+@import "strapless/colors/scss/colors";
+
+// Mixins
+@import "strapless/flexbox/scss/flexbox-mixins";
+@import "strapless/display/scss/display-mixins";
+@import "strapless/grid/scss/grid-mixins";
+
+// Set Feature Variables
+$enable-framework: true !global;
+
+// Include Non-Responsive CSS
+@import "strapless/display/scss/display";
+@import "strapless/flexbox/scss/flexbox";
+@import "strapless/grid/scss/grid";
+
+// Loop through Responsive Mixins - All together so media queries don't repeat
+@if $enable-framework {
+  @each $bp, $min in $grid-breakpoints {
+    @if $min == 0 {
+      @include display($bp);
+      @include grid-responsive($bp);
+    } @else {
+      @media screen and (min-width: $min) {
+        @include display($bp);
+        @include flex-responsive($bp);
+        @include grid-responsive($bp);
+      }
+    }
+  }
+}

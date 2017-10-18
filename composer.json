@@ -1,0 +1,29 @@
+{
+  "name": "strapless/utility",
+  "description": "Groups the StrapLess base, color, flexbox, and display components together for a minimal CSS utility package.",
+  "keywords": [
+      "sass",
+      "css",
+      "utility",
+      "scss",
+      "strapless",
+      "flexbox",
+      "display"
+  ],
+  "homepage": "https://www.github.com/strapless/utility",
+  "version": "1.0",
+  "authors": [
+      {
+          "name": "Aaron M Jones",
+          "homepage": "http://www.jonesiscoding.com"
+      }
+  ],
+  "license": "MIT",
+  "require": {
+    "strapless/base": "^1.0",
+    "strapless/colors": "^1.0",
+    "strapless/display": "^1.0",
+    "strapless/flexbox": "^1.0",
+    "strapless/grid": "^1.0"
+  }
+}
