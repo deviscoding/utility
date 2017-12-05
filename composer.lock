@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "634d7832ac80ba216d7ff8a300043577",
+    "content-hash": "f1c6020bb715a805521e9ed4834bda79",
     "packages": [
         {
             "name": "strapless/base",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/strapless/base.git",
-                "reference": "826c2ab17493076d06169fcea7f75e4a1027d5fa"
+                "reference": "4f3b464eb4d196a71646dd29501d565b28cc60bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/strapless/base/zipball/826c2ab17493076d06169fcea7f75e4a1027d5fa",
-                "reference": "826c2ab17493076d06169fcea7f75e4a1027d5fa",
+                "url": "https://api.github.com/repos/strapless/base/zipball/4f3b464eb4d196a71646dd29501d565b28cc60bd",
+                "reference": "4f3b464eb4d196a71646dd29501d565b28cc60bd",
                 "shasum": ""
             },
             "type": "library",
@@ -41,20 +41,20 @@
                 "strapless",
                 "variables"
             ],
-            "time": "2017-12-01T14:50:31+00:00"
+            "time": "2017-12-05T01:04:44+00:00"
         },
         {
             "name": "strapless/colors",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/strapless/colors.git",
-                "reference": "3acc84557d0277cadd1d723a140a83b2092ffd22"
+                "reference": "a33fd13fd3a264145d1b8007e2c74a1d302f25d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/strapless/colors/zipball/3acc84557d0277cadd1d723a140a83b2092ffd22",
-                "reference": "3acc84557d0277cadd1d723a140a83b2092ffd22",
+                "url": "https://api.github.com/repos/strapless/colors/zipball/a33fd13fd3a264145d1b8007e2c74a1d302f25d9",
+                "reference": "a33fd13fd3a264145d1b8007e2c74a1d302f25d9",
                 "shasum": ""
             },
             "type": "library",
@@ -77,7 +77,7 @@
                 "scss",
                 "strapless"
             ],
-            "time": "2017-11-16T14:48:39+00:00"
+            "time": "2017-12-05T15:09:02+00:00"
         },
         {
             "name": "strapless/display",
