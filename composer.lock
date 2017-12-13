@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1c6020bb715a805521e9ed4834bda79",
+    "content-hash": "4422d0b9a64d48f1eaf49d0c780aee8e",
     "packages": [
         {
             "name": "strapless/base",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/strapless/base.git",
-                "reference": "4f3b464eb4d196a71646dd29501d565b28cc60bd"
+                "reference": "a7ba47d09e32b6b9200db0f24d360cc73d75d253"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/strapless/base/zipball/4f3b464eb4d196a71646dd29501d565b28cc60bd",
-                "reference": "4f3b464eb4d196a71646dd29501d565b28cc60bd",
+                "url": "https://api.github.com/repos/strapless/base/zipball/a7ba47d09e32b6b9200db0f24d360cc73d75d253",
+                "reference": "a7ba47d09e32b6b9200db0f24d360cc73d75d253",
                 "shasum": ""
             },
             "type": "library",
@@ -41,7 +41,7 @@
                 "strapless",
                 "variables"
             ],
-            "time": "2017-12-05T01:04:44+00:00"
+            "time": "2017-12-13T13:53:02+00:00"
         },
         {
             "name": "strapless/colors",
@@ -81,16 +81,16 @@
         },
         {
             "name": "strapless/display",
-            "version": "1.0.2",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/strapless/display.git",
-                "reference": "fdc74c658b673cbb7a9e7645bd829da96ca096f9"
+                "reference": "efff0042b09d87e6b019bb6a4a1ead3899242d56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/strapless/display/zipball/fdc74c658b673cbb7a9e7645bd829da96ca096f9",
-                "reference": "fdc74c658b673cbb7a9e7645bd829da96ca096f9",
+                "url": "https://api.github.com/repos/strapless/display/zipball/efff0042b09d87e6b019bb6a4a1ead3899242d56",
+                "reference": "efff0042b09d87e6b019bb6a4a1ead3899242d56",
                 "shasum": ""
             },
             "require": {
@@ -120,7 +120,7 @@
                 "scss",
                 "strapless"
             ],
-            "time": "2017-10-26T13:57:01+00:00"
+            "time": "2017-12-13T13:58:58+00:00"
         },
         {
             "name": "strapless/flexbox",
