@@ -1,0 +1,43 @@
+@import "strapless/base/scss/functions/functions";
+@import "functions";
+@import "variables";
+
+@mixin spacing-rule($prop, $value, $side: null, $infix: null) {
+  $suffix: null;
+  @if not($side == null) {
+    $suffix: class-from-property($side);
+  } @else {
+    $suffix: null;
+  }
+  @if($suffix == lr) { $suffix: x; }
+  @if($suffix == tb) { $suffix: y; }
+  $prefix: class-from-property($prop);
+
+  .#{$prefix}#{$suffix}#{$infix}-#{$value} {
+    @for $i from 1 through length($side) {
+      $side-prop: nth($side,$i);
+      $sidein: if($side-prop,-#{$side-prop},null);
+      #{$prop}#{$sidein}: $value;
+    }
+  }
+}
+
+@mixin spacing-responsive($bp) {
+  $infix: breakpoint-infix($bp);
+
+  @each $prefix, $prop in (m: margin, p: padding) {
+    $vals: (0, auto);
+    @for $i from 1 through length($vals) {
+      $value: nth($vals,$i);
+      @include spacing-rule($prop,$value,null,$infix);
+      @each $side, $side-props in (t: (top), r: (right), b: (bottom), l: (left), x: (left right), y: (top bottom)) {
+        @include spacing-rule($prop,$value,$side-props,$infix);
+      }
+    }
+  }
+
+  // Deprecated
+  @each $prefix, $prop in (m: margin, ml: margin-left, mr: margin-right, mt: margin-top, mb: margin-bottom) {
+    .#{$prefix}#{$infix}-spacer { #{$prop}: space-y(md, rem) * 2; }
+  }
+}

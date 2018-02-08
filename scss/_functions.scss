@@ -1,0 +1,25 @@
+
+@function class-from-property($value) {
+  $size: null;
+  @if not(type-of($value) == list) {
+    $separator: unquote("-");
+    $size: str-slice($value,1,1);
+    @for $i from 1 through str-length($value) {
+      $char: str-slice($value,$i,$i);
+      @if str-slice($value,$i,$i) == $separator {
+        @if $i + 1 <= str-length($value) {
+          $char: str-slice($value,$i + 1,$i + 1);
+          $size: #{$size}#{$char};
+        }
+      }
+    }
+  } @else {
+    @for $i from 1 through length($value) {
+      $val: nth($value,$i);
+      $char: class-from-property($val);
+      $size: #{$size}#{$char};
+    }
+  }
+
+  @return $size;
+}

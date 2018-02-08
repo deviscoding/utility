@@ -6,6 +6,8 @@
 @import "strapless/flexbox/scss/flexbox-mixins";
 @import "strapless/display/scss/display-mixins";
 @import "strapless/grid/scss/grid-mixins";
+@import "sizing-mixins";
+@import "spacing-mixins";
 
 // Non-Responsive CSS
 @import "strapless/display/scss/display";

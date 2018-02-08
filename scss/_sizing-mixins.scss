@@ -1,0 +1,60 @@
+@import "strapless/base/scss/functions/functions";
+@import "functions";
+@import "variables";
+
+@mixin sizing-rule($prefix, $prop, $value, $infix: '') {
+  $size: 0;
+  @if type-of($value) == number {
+    $size: strip-unit($value);
+  } @else if($value != auto) {
+    $size: class-from-property($value);
+  } @else {
+    $size: $value;
+  }
+
+  .#{$prefix}#{$infix}-#{$size} {
+    #{$prop}: $value !important;
+    @if $value == 100% {
+      @if $prop == flex-basis {
+        max-width: 100%;
+      }
+      //noinspection CssInvalidPropertyValue
+      max-width: fill-available;
+    }
+  }
+}
+
+@mixin sizing-responsive($bp) {
+  $infix: breakpoint-infix($bp);
+
+  @if $infix == null {
+    // Numeric values -- NOT RESPONSIVE
+    @each $prop, $abbrev in (width: w, height: h, flex-basis: fb, max-width: max, min-width: min) {
+      @each $size, $length in $sizes {
+        @include sizing-rule($abbrev, $prop, $length);
+      }
+    }
+
+    // BS4 Compatibility
+    .mw-100 { @extend .max-100; }
+    .mh-100 { max-height: 100%; }
+  }
+
+  // Width & height non-numeric specifics
+  @each $prop, $abbrev in (width: w, height: h) {
+    $vals: (auto, fit-content, fill-available);
+    @for $i from 1 through length($vals)  {
+      $size: nth($vals, $i);
+      @include sizing-rule($abbrev, $prop, $size, $infix);
+    }
+  }
+
+  // Min-Width, Max-Width non-numeric specifics
+  @each $prop, $abbrev in (min-width: min, max-width: max) {
+    $vals: (fit-content, fill-available, max-content, min-content, unset);
+    @for $i from 1 through length($vals)  {
+      $size: nth($vals,$i);
+      @include sizing-rule($abbrev, $prop, $size, $infix);
+    }
+  }
+}

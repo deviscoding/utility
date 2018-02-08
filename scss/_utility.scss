@@ -6,14 +6,16 @@
 @import "strapless/flexbox/scss/flexbox-mixins";
 @import "strapless/display/scss/display-mixins";
 @import "strapless/grid/scss/grid-mixins";
+@import "spacing-mixins";
+@import "sizing-mixins";
 
 // Set Feature Variables
 $enable-framework: true;
 
 /*!
- * Strapless Utility v1.1.3 (http://github.com/strapless/utility)
+ * Strapless Utility v1.2 (http://github.com/strapless/utility)
  * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
- * Licensed under MIT (https://github.com/strapless/utilit/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/strapless/utility/blob/master/LICENSE)
  */
 
 // Include Non-Responsive CSS
@@ -27,11 +29,15 @@ $enable-framework: true;
     @if $min == 0 {
       @include display($bp);
       @include grid-responsive($bp);
+      @include sizing-responsive($bp);
+      @include spacing-responsive($bp);
     } @else {
       @media screen and (min-width: $min) {
         @include display($bp);
         @include flex-responsive($bp);
         @include grid-responsive($bp);
+        @include sizing-responsive($bp);
+        @include spacing-responsive($bp);
       }
     }
   }
