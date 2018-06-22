@@ -1,6 +1,6 @@
 {
-  "name": "strapless/utility",
-  "description": "Groups the StrapLess base, color, flexbox, and display components together for a minimal CSS utility package.",
+  "name": "deviscoding/utility",
+  "description": "Groups the DevIsCoding base, color, flexbox, and display components together for a minimal CSS utility package.",
   "keywords": [
       "sass",
       "css",
@@ -10,8 +10,8 @@
       "flexbox",
       "display"
   ],
-  "homepage": "https://www.github.com/strapless/utility",
-  "version": "1.2",
+  "homepage": "https://www.github.com/deviscoding/utility",
+  "version": "1.2.1",
   "authors": [
       {
           "name": "Aaron M Jones",
@@ -19,11 +19,14 @@
       }
   ],
   "license": "MIT",
+  "replace": {
+    "strapless/utility": "^1.0"
+  },
   "require": {
-    "strapless/base": "^1.1.9",
-    "strapless/colors": "^1.0.4",
-    "strapless/display": "^1.0",
-    "strapless/flexbox": "^1.1",
-    "strapless/grid": "^1.0.5"
+    "deviscoding/base": "^2.0",
+    "deviscoding/colors": "^1.0.4",
+    "deviscoding/display": "^1.0.8",
+    "deviscoding/flexbox": "^1.1.2",
+    "deviscoding/grid": "^1.0.7"
   }
 }

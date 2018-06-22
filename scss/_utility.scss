@@ -1,11 +1,13 @@
 // Base Functions & Maps
-@import "strapless/base/scss/base";
-@import "strapless/colors/scss/colors";
+@import "deviscoding/base/scss/base";
+@import "deviscoding/colors/scss/colors";
+@import "deviscoding/responsive/scss/rwd-variables";
 
 // Mixins
-@import "strapless/flexbox/scss/flexbox-mixins";
-@import "strapless/display/scss/display-mixins";
-@import "strapless/grid/scss/grid-mixins";
+@import "deviscoding/responsive/scss/rwd-mixins";
+@import "deviscoding/flexbox/scss/flexbox-mixins";
+@import "deviscoding/display/scss/display-mixins";
+@import "deviscoding/grid/scss/grid-mixins";
 @import "spacing-mixins";
 @import "sizing-mixins";
 
@@ -13,15 +15,15 @@
 $enable-framework: true;
 
 /*!
- * Strapless Utility v1.2 (http://github.com/strapless/utility)
+ * DevIsCoding Utility v1.2.1 (http://github.com/deviscoding/utility)
  * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
- * Licensed under MIT (https://github.com/strapless/utility/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/deviscoding/utility/blob/master/LICENSE)
  */
 
 // Include Non-Responsive CSS
-@import "strapless/display/scss/display";
-@import "strapless/flexbox/scss/flexbox";
-@import "strapless/grid/scss/grid";
+@import "deviscoding/display/scss/display";
+@import "deviscoding/flexbox/scss/flexbox";
+@import "deviscoding/grid/scss/grid";
 
 // Loop through Responsive Mixins - All together so media queries don't repeat
 @if $enable-framework {

@@ -1,7 +1,7 @@
 /*!
- * Strapless Utility v1.2 (http://github.com/strapless/utility)
+ * DevIsCoding Utility v1.2.1 (http://github.com/deviscoding/utility)
  * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
- * Licensed under MIT (https://github.com/strapless/utility/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/deviscoding/utility/blob/master/LICENSE)
  */
 @media print {
   .d-print-none {
@@ -21,7 +21,7 @@
     display: inline;
   }
   .d-print-inline-flex {
-    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
@@ -46,31 +46,31 @@
   display: block;
 }
 
-.d-none, .touch .d-touch-none, .fallback .d-fallback-none, .baseline .d-baseline-none, .ios .d-ios-none, .android .d-android-none, .no-js .d-js-block, .no-js .d-js-flex, .no-js .d-js-inline, .no-js .d-js-inline-flex, .no-js .d-js-inline-block {
+.d-none, .fallback .d-fallback-none, .baseline .d-baseline-none, .ios .d-ios-none, .android .d-android-none, .no-js .d-js-block, .no-js .d-js-flex, .no-js .d-js-inline, .no-js .d-js-inline-flex, .no-js .d-js-inline-block {
   display: none !important;
 }
 
-.d-block, .touch .d-touch-block, .fallback .d-fallback-block, .baseline .d-baseline-block, .ios .d-ios-block, .android .d-android-block {
+.d-block, .fallback .d-fallback-block, .baseline .d-baseline-block, .ios .d-ios-block, .android .d-android-block {
   display: block !important;
 }
 
-.d-flex, .touch .d-touch-flex, .fallback .d-fallback-flex, .baseline .d-baseline-flex, .ios .d-ios-flex, .android .d-android-flex {
+.d-flex, .fallback .d-fallback-flex, .baseline .d-baseline-flex, .ios .d-ios-flex, .android .d-android-flex {
   display: -webkit-flex  !important;
   display: -ms-flexbox  !important;
   display: flex  !important;
 }
 
-.d-inline, .touch .d-touch-inline, .fallback .d-fallback-inline, .baseline .d-baseline-inline, .ios .d-ios-inline, .android .d-android-inline {
+.d-inline, .fallback .d-fallback-inline, .baseline .d-baseline-inline, .ios .d-ios-inline, .android .d-android-inline {
   display: inline !important;
 }
 
-.d-inline-flex, .touch .d-touch-inline-flex, .fallback .d-fallback-inline-flex, .baseline .d-baseline-inline-flex, .ios .d-ios-inline-flex, .android .d-android-inline-flex {
-  display: -webkit-inline-box  !important;
+.d-inline-flex, .fallback .d-fallback-inline-flex, .baseline .d-baseline-inline-flex, .ios .d-ios-inline-flex, .android .d-android-inline-flex {
+  display: -webkit-inline-flex  !important;
   display: -ms-inline-flexbox  !important;
   display: inline-flex  !important;
 }
 
-.d-inline-block, .touch .d-touch-inline-block, .fallback .d-fallback-inline-block, .baseline .d-baseline-inline-block, .ios .d-ios-inline-block, .android .d-android-inline-block {
+.d-inline-block, .fallback .d-fallback-inline-block, .baseline .d-baseline-inline-block, .ios .d-ios-inline-block, .android .d-android-inline-block {
   display: inline-block !important;
 }
 
@@ -411,7 +411,7 @@
 }
 
 .d-xs-inline-flex {
-  display: -webkit-inline-box  !important;
+  display: -webkit-inline-flex  !important;
   display: -ms-inline-flexbox  !important;
   display: inline-flex  !important;
 }
@@ -631,6 +631,8 @@
 
 .w-100 {
   width: 100% !important;
+  max-width: -webkit-fill-available;
+  max-width: -moz-available;
   max-width: fill-available;
 }
 
@@ -660,6 +662,8 @@
 
 .h-100 {
   height: 100% !important;
+  max-width: -webkit-fill-available;
+  max-width: -moz-available;
   max-width: fill-available;
 }
 
@@ -704,6 +708,8 @@
   -ms-flex-preferred-size: 100%  !important;
   flex-basis: 100%  !important;
   max-width: 100%;
+  max-width: -webkit-fill-available;
+  max-width: -moz-available;
   max-width: fill-available;
 }
 
@@ -733,6 +739,8 @@
 
 .max-100, .mw-100 {
   max-width: 100% !important;
+  max-width: -webkit-fill-available;
+  max-width: -moz-available;
   max-width: fill-available;
 }
 
@@ -762,6 +770,8 @@
 
 .min-100 {
   min-width: 100% !important;
+  max-width: -webkit-fill-available;
+  max-width: -moz-available;
   max-width: fill-available;
 }
 
@@ -774,11 +784,15 @@
 }
 
 .w-fc {
-  width: fit-content !important;
+  width: -webkit-fit-content  !important;
+  width: -moz-fit-content  !important;
+  width: fit-content  !important;
 }
 
 .w-fa {
-  width: fill-available !important;
+  width: -webkit-fill-available  !important;
+  width: -moz-available  !important;
+  width: fill-available  !important;
 }
 
 .h-auto {
@@ -794,11 +808,15 @@
 }
 
 .min-fc {
-  min-width: fit-content !important;
+  min-width: -webkit-fit-content  !important;
+  min-width: -moz-fit-content  !important;
+  min-width: fit-content  !important;
 }
 
 .min-fa {
-  min-width: fill-available !important;
+  min-width: -webkit-fill-available  !important;
+  min-width: -moz-available  !important;
+  min-width: fill-available  !important;
 }
 
 .min-mc {
@@ -814,11 +832,15 @@
 }
 
 .max-fc {
-  max-width: fit-content !important;
+  max-width: -webkit-fit-content  !important;
+  max-width: -moz-fit-content  !important;
+  max-width: fit-content  !important;
 }
 
 .max-fa {
-  max-width: fill-available !important;
+  max-width: -webkit-fill-available  !important;
+  max-width: -moz-available  !important;
+  max-width: fill-available  !important;
 }
 
 .max-mc {
@@ -998,7 +1020,7 @@
   display: flex  !important;
   }
   .d-sm-inline-flex {
-    display: -webkit-inline-box  !important;
+    display: -webkit-inline-flex  !important;
   display: -ms-inline-flexbox  !important;
   display: inline-flex  !important;
   }
@@ -1339,10 +1361,14 @@
     width: auto !important;
   }
   .w-sm-fc {
-    width: fit-content !important;
+    width: -webkit-fit-content  !important;
+  width: -moz-fit-content  !important;
+  width: fit-content  !important;
   }
   .w-sm-fa {
-    width: fill-available !important;
+    width: -webkit-fill-available  !important;
+  width: -moz-available  !important;
+  width: fill-available  !important;
   }
   .h-sm-auto {
     height: auto !important;
@@ -1354,10 +1380,14 @@
     height: fill-available !important;
   }
   .min-sm-fc {
-    min-width: fit-content !important;
+    min-width: -webkit-fit-content  !important;
+  min-width: -moz-fit-content  !important;
+  min-width: fit-content  !important;
   }
   .min-sm-fa {
-    min-width: fill-available !important;
+    min-width: -webkit-fill-available  !important;
+  min-width: -moz-available  !important;
+  min-width: fill-available  !important;
   }
   .min-sm-mc {
     min-width: max-content !important;
@@ -1369,10 +1399,14 @@
     min-width: unset !important;
   }
   .max-sm-fc {
-    max-width: fit-content !important;
+    max-width: -webkit-fit-content  !important;
+  max-width: -moz-fit-content  !important;
+  max-width: fit-content  !important;
   }
   .max-sm-fa {
-    max-width: fill-available !important;
+    max-width: -webkit-fill-available  !important;
+  max-width: -moz-available  !important;
+  max-width: fill-available  !important;
   }
   .max-sm-mc {
     max-width: max-content !important;
@@ -1517,7 +1551,7 @@
   display: flex  !important;
   }
   .d-md-inline-flex {
-    display: -webkit-inline-box  !important;
+    display: -webkit-inline-flex  !important;
   display: -ms-inline-flexbox  !important;
   display: inline-flex  !important;
   }
@@ -1854,10 +1888,14 @@
     width: auto !important;
   }
   .w-md-fc {
-    width: fit-content !important;
+    width: -webkit-fit-content  !important;
+  width: -moz-fit-content  !important;
+  width: fit-content  !important;
   }
   .w-md-fa {
-    width: fill-available !important;
+    width: -webkit-fill-available  !important;
+  width: -moz-available  !important;
+  width: fill-available  !important;
   }
   .h-md-auto {
     height: auto !important;
@@ -1869,10 +1907,14 @@
     height: fill-available !important;
   }
   .min-md-fc {
-    min-width: fit-content !important;
+    min-width: -webkit-fit-content  !important;
+  min-width: -moz-fit-content  !important;
+  min-width: fit-content  !important;
   }
   .min-md-fa {
-    min-width: fill-available !important;
+    min-width: -webkit-fill-available  !important;
+  min-width: -moz-available  !important;
+  min-width: fill-available  !important;
   }
   .min-md-mc {
     min-width: max-content !important;
@@ -1884,10 +1926,14 @@
     min-width: unset !important;
   }
   .max-md-fc {
-    max-width: fit-content !important;
+    max-width: -webkit-fit-content  !important;
+  max-width: -moz-fit-content  !important;
+  max-width: fit-content  !important;
   }
   .max-md-fa {
-    max-width: fill-available !important;
+    max-width: -webkit-fill-available  !important;
+  max-width: -moz-available  !important;
+  max-width: fill-available  !important;
   }
   .max-md-mc {
     max-width: max-content !important;
@@ -2032,7 +2078,7 @@
   display: flex  !important;
   }
   .d-lg-inline-flex {
-    display: -webkit-inline-box  !important;
+    display: -webkit-inline-flex  !important;
   display: -ms-inline-flexbox  !important;
   display: inline-flex  !important;
   }
@@ -2373,10 +2419,14 @@
     width: auto !important;
   }
   .w-lg-fc {
-    width: fit-content !important;
+    width: -webkit-fit-content  !important;
+  width: -moz-fit-content  !important;
+  width: fit-content  !important;
   }
   .w-lg-fa {
-    width: fill-available !important;
+    width: -webkit-fill-available  !important;
+  width: -moz-available  !important;
+  width: fill-available  !important;
   }
   .h-lg-auto {
     height: auto !important;
@@ -2388,10 +2438,14 @@
     height: fill-available !important;
   }
   .min-lg-fc {
-    min-width: fit-content !important;
+    min-width: -webkit-fit-content  !important;
+  min-width: -moz-fit-content  !important;
+  min-width: fit-content  !important;
   }
   .min-lg-fa {
-    min-width: fill-available !important;
+    min-width: -webkit-fill-available  !important;
+  min-width: -moz-available  !important;
+  min-width: fill-available  !important;
   }
   .min-lg-mc {
     min-width: max-content !important;
@@ -2403,10 +2457,14 @@
     min-width: unset !important;
   }
   .max-lg-fc {
-    max-width: fit-content !important;
+    max-width: -webkit-fit-content  !important;
+  max-width: -moz-fit-content  !important;
+  max-width: fit-content  !important;
   }
   .max-lg-fa {
-    max-width: fill-available !important;
+    max-width: -webkit-fill-available  !important;
+  max-width: -moz-available  !important;
+  max-width: fill-available  !important;
   }
   .max-lg-mc {
     max-width: max-content !important;
@@ -2551,7 +2609,7 @@
   display: flex  !important;
   }
   .d-xl-inline-flex {
-    display: -webkit-inline-box  !important;
+    display: -webkit-inline-flex  !important;
   display: -ms-inline-flexbox  !important;
   display: inline-flex  !important;
   }
@@ -2892,10 +2950,14 @@
     width: auto !important;
   }
   .w-xl-fc {
-    width: fit-content !important;
+    width: -webkit-fit-content  !important;
+  width: -moz-fit-content  !important;
+  width: fit-content  !important;
   }
   .w-xl-fa {
-    width: fill-available !important;
+    width: -webkit-fill-available  !important;
+  width: -moz-available  !important;
+  width: fill-available  !important;
   }
   .h-xl-auto {
     height: auto !important;
@@ -2907,10 +2969,14 @@
     height: fill-available !important;
   }
   .min-xl-fc {
-    min-width: fit-content !important;
+    min-width: -webkit-fit-content  !important;
+  min-width: -moz-fit-content  !important;
+  min-width: fit-content  !important;
   }
   .min-xl-fa {
-    min-width: fill-available !important;
+    min-width: -webkit-fill-available  !important;
+  min-width: -moz-available  !important;
+  min-width: fill-available  !important;
   }
   .min-xl-mc {
     min-width: max-content !important;
@@ -2922,10 +2988,14 @@
     min-width: unset !important;
   }
   .max-xl-fc {
-    max-width: fit-content !important;
+    max-width: -webkit-fit-content  !important;
+  max-width: -moz-fit-content  !important;
+  max-width: fit-content  !important;
   }
   .max-xl-fa {
-    max-width: fill-available !important;
+    max-width: -webkit-fill-available  !important;
+  max-width: -moz-available  !important;
+  max-width: fill-available  !important;
   }
   .max-xl-mc {
     max-width: max-content !important;

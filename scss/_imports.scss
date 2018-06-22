@@ -1,16 +1,18 @@
 // Base Functions & Maps
-@import "strapless/base/scss/base";
-@import "strapless/colors/scss/colors";
+@import "deviscoding/base/scss/base";
+@import "deviscoding/colors/scss/colors";
+@import "deviscoding/responsive/scss/rwd-variables";
 
 // Mixins
-@import "strapless/flexbox/scss/flexbox-mixins";
-@import "strapless/display/scss/display-mixins";
-@import "strapless/grid/scss/grid-mixins";
+@import "deviscoding/responsive/scss/rwd-mixins";
+@import "deviscoding/flexbox/scss/flexbox-mixins";
+@import "deviscoding/display/scss/display-mixins";
+@import "deviscoding/grid/scss/grid-mixins";
 @import "sizing-mixins";
 @import "spacing-mixins";
 
 // Non-Responsive CSS
-@import "strapless/display/scss/display";
-@import "strapless/flexbox/scss/flexbox";
-@import "strapless/grid/scss/grid";
+@import "deviscoding/display/scss/display";
+@import "deviscoding/flexbox/scss/flexbox";
+@import "deviscoding/grid/scss/grid";
 @import "print";
